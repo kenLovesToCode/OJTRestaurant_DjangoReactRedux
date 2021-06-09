@@ -57,18 +57,12 @@ export const deleteRedux = (dataType, payload) => async (dispatch) => {
 
 export const deleteData = (uri, dataType, payload) => async (dispatch) => {
     try {
-        await axios.delete(`${endpoint}/${uri}/${payload}`)
-            .then(res => {
-                if (res.data.message === 'error') {
-
-                } else {
-                    dispatch({
-                        type: DELETE,
-                        dataType,
-                        payload
-                    });
-                }
-            })
+        await axios.delete(`${endpoint}/${uri}/${payload}/`);
+        dispatch({
+            type: DELETE,
+            dataType,
+            payload
+        });
     } catch (err) {
         console.log('Error occured : ', err);
     }

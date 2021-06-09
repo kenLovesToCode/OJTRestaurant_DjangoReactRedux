@@ -18,3 +18,6 @@ class Tbl_menu(models.Model):
 
     def __str__(self):
         return self.MenuName
+
+
+# https://github.com/kenLovesToCode/OJTRestaurant_DjangoReactRedux

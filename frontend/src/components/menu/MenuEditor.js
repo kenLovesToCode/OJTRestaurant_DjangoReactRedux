@@ -28,10 +28,6 @@ const useStyles = makeStyles((theme) => ({
     select: {
         margin: theme.spacing(4, 0, 4),
     },
-    formControl: {
-        margin: theme.spacing(2, 0, 3),
-        minWidth: 390,
-    },
     button: {
         margin: theme.spacing(1),
         minWidth: 180,
@@ -105,8 +101,8 @@ function MenuEditor(props) {
                         props.history.push('/restaurant/menu');
                     }, 1000);
                 } else {
-                    var a = props.menus.find(m => m.MenuName === userInput.MenuName);
-                    if (typeof a == 'undefined' || props.menu.MenuName === userInput.MenuName) {
+                    var b = props.menus.find(m => m.MenuName === userInput.MenuName);
+                    if (typeof b == 'undefined' || props.menu.MenuName === userInput.MenuName) {
                         props.updateMenu('api/v1/menu', MENUS, userInput, props.menu.id)
                         setMessage('Menu has been updated.');
                         setOpen(true);

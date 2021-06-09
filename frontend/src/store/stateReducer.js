@@ -1,5 +1,5 @@
 import { initialData } from "./initialData";
-import { STATE_SET_DATA, STATE_IS_CREATING, STATE_ERROR_MESSAGE } from "./stateActionTypes";
+import { STATE_SET_DATA, STATE_IS_CREATING } from "./stateActionTypes";
 
 export default function (storeData, action) {
     switch (action.type) {
